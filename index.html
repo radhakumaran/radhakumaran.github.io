@@ -371,9 +371,9 @@ function renderContact(rows) {
   if (!rows.length) { block.innerHTML = ''; return; }
   const r = rows[0];
   let html = `<div class="col-heading-wrap"><span class="col-heading">Contact</span></div>`;
-  if (r.address)      html += r.address.split('\\n').join('<br>') + '<br>';
-  if (r.office_hours) html += `<br>${r.office_hours}<br>`;
-  if (r.email)        html += `<br><a href="mailto:${r.email}">${r.email}</a>`;
+  if (r.address)      html += r.address.split('\\n').join('<br>');
+  if (r.office_hours) html += `<br>${r.office_hours}`;
+  if (r.email)        html += `<br>${r.email}`;
   block.innerHTML = html;
 }
 
