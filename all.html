@@ -249,7 +249,7 @@ async function fetchSheet(tab) {
   const cols = json.table.cols.map(c => c.label.trim());
   return json.table.rows.map(row => {
     const obj = {};
-    row.c.forEach((cell, i) => { obj[cols[i]] = cell ? (cell.v ?? cell.f ?? '') : ''; });
+    row.c.forEach((cell, i) => { obj[cols[i]] = cell ? (cell.f ?? cell.f ?? '') : ''; });
     return obj;
   });
 }
