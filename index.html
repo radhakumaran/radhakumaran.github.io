@@ -327,7 +327,7 @@ const SHOW_IMAGES = false;
 const PREVIEW_NEWS = 5;
 
 // How many publications to show on the home page (rest go to all.html)
-const PREVIEW_PUBS = 8;
+const PREVIEW_PUBS = 5;
 
 // ════════════════════════════════════════════════════
 //  Sheets fetcher
@@ -341,7 +341,7 @@ async function fetchSheet(tab) {
   const cols = json.table.cols.map(c => c.label.trim());
   return json.table.rows.map(row => {
     const obj = {};
-    row.c.forEach((cell, i) => { obj[cols[i]] = cell ? (cell.f ?? cell.f ?? '') : ''; });
+    row.c.forEach((cell, i) => { obj[cols[i]] = cell ? (typeof cell.v === 'string' ? cell.v : (cell.f ?? '')) : ''; });
     return obj;
   });
 }
