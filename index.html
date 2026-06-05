@@ -428,8 +428,9 @@ function pubItemHTML(r) {
 
 function renderPublications(rows) {
   const el = document.getElementById('pub-list');
-  el.innerHTML = rows.slice(0, PREVIEW_PUBS).map(pubItemHTML).join('');
-  if (rows.length > PREVIEW_PUBS)
+  const featured = rows.filter(r => r.featured && r.featured.toLowerCase() === 'yes');
+  el.innerHTML = featured.map(pubItemHTML).join('');
+  if (rows.length > featured.length)
     document.getElementById('pub-all-link').style.display = 'inline-block';
 }
 
