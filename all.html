@@ -311,7 +311,7 @@ function pubItemHTML(r) {
 }
 
 function renderPublications(rows) {
-  document.getElementById('pub-count').textContent = `${rows.length} papers`;
+  document.getElementById('pub-count').textContent = `${rows.length} items`;
   document.getElementById('pub-list').innerHTML = rows.map(pubItemHTML).join('');
 }
 
