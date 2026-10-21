@@ -231,24 +231,21 @@ a:hover { color: var(--blue); text-decoration: underline; }
 .pub-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12px; }
 .pub-links a {
   color: var(--blue-dark);
-  padding: 1px 7px;
-  border: 1px solid var(--blue-mid);
-  border-radius: 3px;
+  text-transform: lowercase;
+  text-decoration: underline;
 }
-.pub-links a:hover { background: var(--blue); color: #fff; border-color: var(--blue); text-decoration: none; }
-
+.pub-links a:hover { color: var(--blue); }
 .pub-type-tag {
   font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 3px;
 }
-.tag-conference { background: var(--blue-light); color: var(--blue-dark); }
-.tag-journal    { background: #dff0e0; color: #2a5e38; }
-.tag-workshop   { background: #f5edd8; color: #7a5500; }
-.tag-poster     { background: #ede0f0; color: #5a2e78; }
+.tag-conference { color: var(--blue-dark); }
+.tag-journal    { color: #2a5e38; }
+.tag-workshop   { color: #7a5500; }
+.tag-poster     { color: #5a2e78; }
+.loading { color: var(--muted); font-size: 13px; font-style: italic; }
 
 .loading { color: var(--muted); font-size: 13px; font-style: italic; }
 
