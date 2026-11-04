@@ -385,7 +385,7 @@ function renderNews(rows) {
 }
 
 const TYPE_CLASS = { conference:'tag-conference', journal:'tag-journal', workshop:'tag-workshop', short:'tag-workshop', abstract:'tag-workshop', poster:'tag-poster' };
-const TYPE_LABEL = { conference:'Conference', journal:'Journal', workshop:'Workshop', short:'Short Paper', abstract:'Abstract', poster:'Poster' };
+const TYPE_LABEL = { conference:'conference', journal:'journal', workshop:'workshop', short:'short paper', abstract:'abstract', poster:'poster' };
 
 function pubItemHTML(r) {
   const type     = (r.type || 'conference').toLowerCase();
