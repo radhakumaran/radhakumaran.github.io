@@ -77,6 +77,7 @@ a:hover { color: var(--blue); text-decoration: underline; }
 
 /* Blue underline heading wrapper used in all three cols */
 .col-heading-wrap {
+  display: inline-block;
   margin-bottom: 0.85rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--blue);
@@ -166,8 +167,7 @@ a:hover { color: var(--blue); text-decoration: underline; }
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 2px solid var(--blue);
+  /* remove padding-bottom and border-bottom from here */
 }
 .pub-section-header h2 {
   font-size: 13px;
@@ -175,6 +175,8 @@ a:hover { color: var(--blue); text-decoration: underline; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--blue);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--blue);
 }
 .pub-section-header .see-all { margin-top: 0; }
 
